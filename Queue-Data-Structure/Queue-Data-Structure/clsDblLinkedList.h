@@ -58,13 +58,14 @@ public:
     }
 
     void PrintList(){
-
-        Node* CurrentNode = Head;
-        while (CurrentNode != NULL) {
-            cout << CurrentNode->Value << " ";
-            CurrentNode = CurrentNode->Next;
+        if (_Size != 0) {
+            Node* CurrentNode = Head;
+            while (CurrentNode != NULL) {
+                cout << CurrentNode->Value << " ";
+                CurrentNode = CurrentNode->Next;
+            }
         }
-        
+        else return;
         cout << endl;
 
     }
